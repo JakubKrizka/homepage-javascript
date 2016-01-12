@@ -3,40 +3,56 @@
 <head>
 	<meta charset="utf-8">
 	<title>Jakub Křižka</title>
-	<meta name="viewport" content="width=device-width">
+    <meta name="description" content="Domovská stránka, testovací one-page aplikace." />
+
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Jakub Křižka">
+    <meta itemprop="description" content="Domovská stránka, testovací one-page aplikace.">
+    <meta itemprop="image" content="http://jakubkrizka.cz/favicons/apple-touch-icon-72x72.png">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@jakubkrizkacz">
+    <meta name="twitter:title" content="Jakub Křižka">
+    <meta name="twitter:description" content="Domovská stránka, testovací one-page aplikace.">
+    <meta name="twitter:creator" content="@jakubkrizkacz">
+    <meta name="twitter:image" content="http://jakubkrizka.cz/favicons/apple-touch-icon-72x72.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Jakub Křižka" />
+    <meta property="og:type" content="profile" />
+    <meta property="profile:first_name" content="Jakub" />
+    <meta property="profile:last_name" content="Křižka" />
+    <meta property="profile:username" content="jakubkrizka" />
+    <meta property="profile:gender" content="male" />
+    <meta property="og:url" content="http://www.jakubkrizka.cz/" />
+    <meta property="og:image" content="http://jakubkrizka.cz/favicons/apple-touch-icon-72x72.png" />
+    <meta property="og:description" content="Domovská stránka, testovací one-page aplikace." />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#000000">
+    <meta name="apple-mobile-web-app-title" content="Jakub Křižka">
+    <meta name="application-name" content="Jakub Křižka">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<style type="text/css">
-        .material-icons {
-            font-family: 'Material Icons';
-            font-weight: normal;
-            font-style: normal;
-            font-size: 48px;  /* Preferred icon size */
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            line-height: 1;
-            text-transform: none;
-            letter-spacing: normal;
-            word-wrap: normal;
-            white-space: nowrap;
-            direction: ltr;
-            
-            /* Support for all WebKit browsers. */
-            -webkit-font-smoothing: antialiased;
-            /* Support for Safari and Chrome. */
-            text-rendering: optimizeLegibility;
-            
-            /* Support for Firefox. */
-            -moz-osx-font-smoothing: grayscale;
-            
-            /* Support for IE. */
-            font-feature-settings: 'liga';
-        }
-	
-	
-        /* center content */
-        
         body { 
             height: 100vh;   
             margin: 0;
@@ -48,32 +64,7 @@
             justify-content: center;
             font-size-adjust: 100%;
         }
-        
-        .radio {
-            position:absolute;
-            width: 180px;
-            margin-top: 115px;
-            margin-left: 75px;
-        }
-        
-        .link {
-            text-decoration:none;
-            color: grey;
-        }
-        
-        .link:hover i {
-            color: #3F51B5;
-        }
-        
-        .link_active i {
-            color: #3F51B5;
-        }
-        
-        .nav-list {
-            text-align:center;
-            margin-top: 15px;
-        }
-        
+
         .github_button {
             margin-top: 18px;
             text-align:center;
@@ -84,18 +75,19 @@
             font-size: 0.66em;
             margin-top: 11px;
             margin-bottom: 18px;
-            color: #3F51B5;
+            color: black;
         }
         
         .content{
             width: 320px;
             animation:0.666s flipInX ease;
+            background-color: darkgray;
         }
         
         .vertical-centered {  
             padding: 2em;
             background: #ddd;
-            max-width: 50%;
+            max-width: 320px;
         }
         
         /* Solution for no-flexbox browsers (proof of concept) */
@@ -114,95 +106,14 @@
             margin-top: -150px;
             margin-left: -25%;  
         }
-        
-        /* device detect */
-        #os-windows.os-windows::after {content:" os-windows ";}
-        #os-mac.os-mac::after {content:" os-mac ";}
-        #os-ios.os-ios::after {content:" os-ios ";}
-        #os-android.os-android::after {content:" os-android ";}
-        #os-linux.os-linux::after {content:" os-linux ";}
-        #os-unix.os-unix::after {content:" os-unix ";}
-        #os-firefoxos.os-firefoxos::after {content:" os-firefoxos ";}
-        #browser-chrome.browser-chrome::after {content:" browser-chrome ";}
-        #browser-firefox.browser-firefox::after {content:" browser-firefox ";}
-        #browser-safari.browser-safari::after {content:" browser-safari ";}
-        #browser-opera.browser-opera::after {content:" browser-opera ";}
-        #browser-ie.browser-ie::after {content:" browser-ie ";}
-        #browser-ms-edge.browser-ms-edge::after {content:" browser-ms-edge ";}
-        #device-android.device-android::after {content:" device-android ";}
-        #device-ipad.device-ipad::after {content:" device-ipad ";}
-        #device-iphone.device-iphone::after {content:" device-iphone ";}
-        #device-ipod.device-ipod::after {content:" device-ipod ";}
-        #device-blackberry.device-blackberry::after {content:" device-blackberry ";}
-        #device-firefoxos.device-firefoxos::after {content:" device-firefoxos ";}
-
-        .view-container {
-            position: relative;
-            
-        }
-        
-        .view-frame.ng-enter {
-            -webkit-animation: 0.999s fade-in;
-            -moz-animation: 0.999s fade-in;
-            -o-animation: 0.999s fade-in;
-            animation: 0.999s fade-in;
-            z-index: 100;
-        }
-
-        @keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @-moz-keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @-webkit-keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        /* don't forget about the vendor-prefixes! */
 	</style>
 </head>
 
 <body ng-app="HomeApp">
-    <iframe frameborder="0" width="10" src="http://ip-94-112-96-59.net.upcbroadband.cz/"></iframe>
-    <md-card class="md-whiteframe-z3 vertical-centered content" ng-controller="BodyCtrl" style="padding:0">
-                     <div ng-controller="MenuCtrl" class="nav-list">
-                            <a class="link" ng-class="{ link_active: isActive('/')}" href="#/"><i class="material-icons">person</i></a>
-                            <a class="link" ng-class="{ link_active: isActive('/projekty')}" href="#/projekty"><i class="material-icons">info</i></a>
-                        </div>
-                        
-                        <div class="view-container">
-                            <div ng-view class="view-frame"></div>
-                        </div>
-    
-                        <div class="radio">
-                           <!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
-                            <script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
-                            <script type="text/javascript">
-                            MRP.insert({
-                            'url':'http://icecast8.play.cz:443/color128.mp3',
-                            'lang':'cs',
-                            'codec':'mp3',
-                            'volume':33,
-                            'autoplay':true,
-                            'buffering':5,
-                            'title':'Color Music Radio',
-                            'welcome':'.',
-                            'bgcolor':'#FFFFFF',
-                            'skin':'mcclean',
-                            'width':180,
-                            'height':60
-                            });
-                            </script>
-                            <!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
-                       </div>
-                           
-                           
-        
-        
+    <md-card class="md-whiteframe-z3 vertical-centered content" ng-controller="BodyCtrl" style="padding:0;min-width:320px;">
+        <!-- Place this tag where you want the widget to render. -->
+        <div class="g-person" id="g-person-pc" data-width="320" data-href="//plus.google.com/u/0/107971217174465605729" data-showtagline="true" data-rel="author"></div>
+
         <div class="github_button">
             <a class="github-button" href="https://github.com/jakubkrizka" data-style="mega" data-count-href="/jakubkrizka/followers" data-count-api="/users/jakubkrizka#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @jakubkrizka on GitHub">GitHub @jakubkrizka</a>
         </div>
@@ -214,30 +125,24 @@
 
     </md-card>
 
+    <script src="//apis.google.com/js/platform.js" async defer>
+        {lang: 'cs'}
+    </script>
+
+    <script async defer id="github-bjs" src="//buttons.github.io/buttons.js"></script>
+
     <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="/bower_components/re-tree/re-tree.js"></script>
     <script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
-    <script type="text/javascript" src="/bower_components/angular-aria/angular-aria.min.js"></script>
-    <script type="text/javascript" src="/bower_components/angular-animate/angular-animate.min.js"></script>
     <script type="text/javascript" src="/bower_components/ng-device-detector/ng-device-detector.min.js"></script>
-    <script type="text/javascript" src="/bower_components/angular-material/angular-material.min.js"></script>
-    
-    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
 
     <script>
         var mainApp = angular.module('HomeApp', [
             'ngRoute',
-            'ng.deviceDetector',
-            'ngMaterial',
-            'ngAnimate'
+            'ng.deviceDetector'
         ]);
-        
-        mainApp.config(function($mdThemingProvider) {
-             $mdThemingProvider.theme('default')
-                .primaryPalette('indigo')
-                .accentPalette('indigo');
-        });
-        
+
         mainApp.config(['$routeProvider', function($routeProvider) {
             $routeProvider.
             when('/', {
@@ -272,9 +177,6 @@
                 return viewLocation === $location.path();
             };
         }]);
-
-
-
     </script>
 </body>
 </html>

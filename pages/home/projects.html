@@ -1,1 +1,7 @@
-sdfsdfsd
+<div ng-controller="MenuCtrl" class="nav-list">
+    <a class="link" ng-class="{ link_active: isActive('/')}" href="#/"><i class="material-icons">person</i></a>
+    <a class="link" ng-class="{ link_active: isActive('/projekty')}" href="#/projekty"><i class="material-icons">info</i></a>
+</div>
+<div class="view-container">
+    <div ng-view class="view-frame"></div>
+</div>
